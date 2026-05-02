@@ -1,4 +1,3 @@
-/* Reset bawaan browser */
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +9,7 @@ body {
   background-color: #f0f4f0;
   color: #333;
   min-height: 100vh;
+  transition: background-color 0.5s ease;
 }
 
 /* Header */
@@ -25,7 +25,7 @@ header h1 {
   margin-bottom: 4px;
 }
 
-/* Layout utama — dua kolom di desktop, satu kolom di mobile */
+/* Layout utama, 2 kolom di desktop, 1 kolom di mobile */
 main {
   display: flex;
   flex-direction: column;
@@ -48,7 +48,7 @@ main {
   color: #2e7d32;
 }
 
-/* Responsive: jadi dua kolom saat layar >= 768px */
+/* 2 kolom saat layar >= 768px */
 @media (min-width: 768px) {
   main {
     flex-direction: row;
@@ -58,4 +58,150 @@ main {
   .card {
     flex: 1;
   }
+}
+
+/* Form input */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.input-group label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.input-group input,
+.input-group select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.button-group button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#btn-hitung {
+  background-color: #2e7d32;
+  color: white;
+}
+
+#btn-hitung:hover {
+  background-color: #1b5e20;
+}
+
+#btn-reset {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+#btn-reset:hover {
+  background-color: #bdbdbd;
+}
+
+.angka-besar {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.hasil-total {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.breakdown ul {
+  list-style: none;
+  padding: 0;
+}
+
+.breakdown ul li {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+}
+
+.placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+.error {
+  color: #c62828;
+  font-weight: bold;
+}
+
+/* Tips */
+.tips-subtitle {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.tips-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tips-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border: 1px solid #eee;
+}
+
+.tips-item:hover {
+  background-color: #f5f5f5;
+}
+
+.tips-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #2e7d32;
+}
+
+/* Efek saat dicentang */
+.tips-item.checked span {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.tips-item.checked {
+  background-color: #e8f5e9;
+  border-color: #a5d6a7;
+}
+
+.pesan-motivasi {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.95rem;
+  min-height: 44px;
+  transition: all 0.3s ease;
 }
