@@ -14,12 +14,10 @@ Emisi karbon dari aktivitas sehari-hari, seperti berkendara dan penggunaan alat 
 - [ ] B2. The Carbon API
 - [ ] B3. Smart Validation
 
-(Centang [x] yang berhasil diselesaikan)
-
 ## Cara Menjalankan Project
 1. Clone repository ini atau download sebagai ZIP lalu extract
 2. Buka folder `public/`
 3. Double-click file `index.html` untuk membuka di browser
 
 ## Tantangan yang Dihadapi
-Pemilihan warna, membuat background yang berubah sesuai input pengguna, dan kurangnya pengetahuan tentang javascript.
+Pemilihan warna, membuat background yang berubah sesuai input pengguna, dan kurangnya pengetahuan tentang javascript dan css.
