@@ -21,12 +21,14 @@ btnHitung.addEventListener('click', function() {
     // Error - semua field harus diisi
     if (isNaN(jarak) || isNaN(durasi_ac) || isNaN(durasi_laptop)) {
         hasilSection.innerHTML = '<p class="error">&#9888; Mohon isi semua field terlebih dahulu.</p>';
+        document.getElementById('btn-hitung').scrollIntoView({ behavior: 'smooth' });
         return;
     }
 
     // Error - tidak boleh negatif
     if (jarak < 0 || durasi_ac < 0 || durasi_laptop < 0) {
         hasilSection.innerHTML = '<p class="error">&#9888; Nilai tidak boleh negatif. Mohon masukkan angka ≥ 0.</p>';
+        document.getElementById('btn-hitung').scrollIntoView({ behavior: 'smooth' });
         return;
     }
 
@@ -71,6 +73,7 @@ btnHitung.addEventListener('click', function() {
             </ul>
         </div>
     `;
+    document.getElementById('btn-hitung').scrollIntoView({ behavior: 'smooth' });
 });
 
 // Tombol reset
@@ -79,7 +82,7 @@ btnReset.addEventListener('click', function() {
     document.getElementById('durasi_ac').value = '';
     document.getElementById('durasi_laptop').value = '';
     document.getElementById('kendaraan').value = 'motor';
-    hasilSection.innerHTML = '<p class="placeholder">Hasil akan muncul di sini setelah kamu klik Hitung.</p>';
+    hasilSection.innerHTML = '<p class="placeholder">Hasil akan muncul di sini setelah Anda klik <strong style="text-decoration: solid; color: #888;">Hitung</strong>.</p>';
     resetBackground();
 });
 
